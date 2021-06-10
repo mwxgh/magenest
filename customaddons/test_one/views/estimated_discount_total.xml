@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        CUSTOMER DISCOUNT CODE      -->
+        <record id="sale_order_discount_code_form_view" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="customer_discount_code_sale_order" widget="bold_cyan"/>
+                </xpath>
+            </field>
+        </record>
+<!--        DISCOUNT ESTIMATED      -->
+        <record id="sale_order_estimated_discount_total_form_view" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="sale_order_discount_estimated" />
+                </xpath>
+            </field>
+        </record>
+<!--        FINAL AMOUNT TOTAL      -->
+        <record id="sale_order_final_amount_total_form_view" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='amount_tax']" position="after">
+                    <field name="final_amount_total"/>
+                </xpath>
+            </field>
+        </record>
+<!--        FILTER      -->
+        <record id="customer_discount_code_filter" model="ir.ui.view">
+            <field name="name">customer.discount.code.filter</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+                    <separator/>
+                    <filter string="Customer with Discount Code" name="check_valid_discount_code_sale_order"
+                            domain="[('check_valid_discount_code_sale_order','=',True)]"/>
+                    <separator/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

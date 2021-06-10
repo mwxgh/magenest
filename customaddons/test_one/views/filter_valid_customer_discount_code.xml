@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        FILTER      -->
+        <record id="filter_valid_customer_code_action" model="ir.actions.act_window">
+            <field name="name">Valid Customers Discount Code</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="domain">[('check_valid_discount_code', '=', True)]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        VIEW FORM       -->
+        <record id="res_partner_just_valid_discount_code_tree_view" model="ir.ui.view">
+            <field name="name">	res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="customer_discount_code" widget="bold_cyan"/>
+                    <field name="check_valid_discount_code" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+<!--        GROUP in MENU ROOT     -->
+        <menuitem id="valid_customer_code"
+                  name="Valid Customers Discount Code"
+                  parent="sale.sale_order_menu"
+                  action="filter_valid_customer_code_action"
+                  sequence="5"/>
+
+    </data>
+</odoo>

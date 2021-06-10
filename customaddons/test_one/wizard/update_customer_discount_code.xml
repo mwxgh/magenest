@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form.view</field>
+            <field name="model">update.customer.code</field>
+            <field name="arch" type="xml">
+                <form string="Update">
+                    <group>
+                        <field name="customer_discount_code"/>
+                    </group>
+                    <footer>
+                        <button name="update" string="Update" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="mass_customer_discount_code_wizard_action" model="ir.actions.act_window">
+            <field name="name">Update</field>
+            <field name="res_model">update.customer.code</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+        </record>
+    </data>
+</odoo>
