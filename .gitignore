@@ -51,7 +51,7 @@ SECURITY.md
 addons/
 customaddons/test_one/
 customaddons/test_two/
-customaddons/tiki_integration/
+#customaddons/tiki_integration/
 customaddons/sale_plans/
 debian/
 doc/

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+                name="Tiki Integration"
+                id="tiki_seller_product_menu"
+                sequence = "1"
+                action="tiki_seller_product_act_window"/>
+        <menuitem
+                name="Seller Product"
+                id="tiki_seller_product_menu_inherit"
+                sequence = "2"
+                parent = "tiki_seller_product_menu"
+                action="tiki_seller_product_act_window"/>
+        <menuitem
+                name="Categories"
+                id="tiki_categories_menu"
+                sequence = "3"
+                parent = "tiki_seller_product_menu"
+                action="tiki_categories_act_window"/>
+<!--        <menuitem-->
+<!--                name="Inventory"-->
+<!--                id="tiki_inventory_menu"-->
+<!--                sequence = "2"-->
+<!--                parent = "tiki_seller_product_menu"-->
+<!--                action="tiki_inventory_act_window"/>-->
+
+          <menuitem
+                name="Tiki Seller"
+                id="tiki_seller_menu"
+                sequence = "6"
+                parent = "tiki_seller_product_menu"
+                action="tiki_seller_act_window"/>
+
+    </data>
+</odoo>

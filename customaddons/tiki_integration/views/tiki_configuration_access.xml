@@ -1,0 +1,61 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+<!--    <data>-->
+
+<!--        <record id="tiki_configuration_form_view" model="ir.ui.view">-->
+<!--            <field name="name">tiki.seller.form</field>-->
+<!--            <field name="model">tiki.seller</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Tiki Seller">-->
+<!--                    <div class="o_setting_right_pane">-->
+<!--                        <div class="text-muted">-->
+<!--                            Connect with Tiki by Tiki API-->
+<!--                        </div>-->
+<!--                        <div class="content-group mt16" >-->
+<!--&lt;!&ndash;attrs="{'invisible': [('is_secret','=', False)], 'required': [('is_secret','=', True)]}"&ndash;&gt;-->
+<!--                            <div><b>Access Secret</b></div>-->
+<!--                            <field name="secret"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--&lt;!&ndash;        <record id="tiki_seller_tree_view" model="ir.ui.view">&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="name">.tiki_seller.tree</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="model">.tiki_seller</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="arch" type="xml">&ndash;&gt;-->
+<!--&lt;!&ndash;                <tree string="ModelTitle">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <field name="create_date"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <field name="example_field"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </tree>&ndash;&gt;-->
+<!--&lt;!&ndash;            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;        </record>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <record id="tiki_seller_search_view" model="ir.ui.view">&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="name">.tiki_seller.search</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="model">.tiki_seller</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="arch" type="xml">&ndash;&gt;-->
+<!--&lt;!&ndash;                <search string="ModelTitle">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <group expand="1" string="Group By">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <filter string="Example Field" name="example_field" domain="[]"&ndash;&gt;-->
+<!--&lt;!&ndash;                                context="{'group_by':'example_field'}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                </search>&ndash;&gt;-->
+<!--&lt;!&ndash;            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;        </record>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <record id="tiki_configuration_seller_act_window" model="ir.actions.act_window">&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="name">Tiki Seller</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="type">ir.actions.act_window</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="res_model">tiki.seller</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="view_mode">form</field>&ndash;&gt;-->
+<!--&lt;!&ndash;            <field name="help" type="html">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="oe_view_nocontent_create">&ndash;&gt;-->
+<!--&lt;!&ndash;                    There is no examples click here to add new ModelTitle.&ndash;&gt;-->
+<!--&lt;!&ndash;                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;        </record>&ndash;&gt;-->
+
+<!--    </data>-->
+<!--</odoo>-->
