@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="discount_with_warranty_form_view_inherit" model="ir.ui.view">
+            <field name="name">quotation.form.view.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sale_order_discount_estimated']" position="after">
+                    <field name="discount_with_warranty"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

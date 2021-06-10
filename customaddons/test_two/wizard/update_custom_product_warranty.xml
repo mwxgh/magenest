@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form.view</field>
+            <field name="model">update.custom.product.warranty</field>
+            <field name="arch" type="xml">
+                <form string="Update">
+                    <group>
+                        <field name="product_warranty"/>
+                        <field name="date_start"/>
+                        <field name="date_stop"/>
+                    </group>
+                    <footer>
+                        <button name="update" string="Update" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="mass_customer_discount_code_wizard_action" model="ir.actions.act_window">
+            <field name="name">Update</field>
+            <field name="res_model">update.custom.product.warranty</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="product.model_product_template"/>
+        </record>
+    </data>
+</odoo>

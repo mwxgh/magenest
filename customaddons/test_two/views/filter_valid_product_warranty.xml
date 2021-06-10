@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        FILTER      -->
+        <record id="filter_valid_product_warranty_action" model="ir.actions.act_window">
+            <field name="name">Valid Product Warranty</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="domain">[('check_valid_warranty', '=', True)]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        VIEW FORM       -->
+        <record id="product_has_warranty_filter" model="ir.ui.view">
+           <field name="name">product.has.warranty.filter</field>
+           <field name="model">product.template</field>
+            <field name="inherit_id" ref="website_sale.product_template_view_tree_website_sale"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="after">
+                    <field name="product_warranty"  groups="test_two.group_advanced_sale"/>
+                    <field name="warranty_interval"  groups="test_two.group_advanced_sale"/>
+                </xpath>
+           </field>
+        </record>
+<!--        GROUP in MENU ROOT     -->
+        <menuitem id="valid_product_warranty"
+                  name="Product Warranty"
+                  parent="sale.product_menu_catalog"
+                  action="filter_valid_product_warranty_action"
+                  sequence="3"/>
+    </data>
+</odoo>
