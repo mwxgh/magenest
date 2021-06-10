@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_plan_order,access_sale_plan_order,model_sale_plan_order,,1,1,1,1
+access_sale_plan_order_line,access_sale_plan_order_line,model_sale_plan_order_line,,1,1,1,1
+access_sale_plan_wizard,access_sale_plan_wizard,model_sale_plan_wizard,,1,1,1,1

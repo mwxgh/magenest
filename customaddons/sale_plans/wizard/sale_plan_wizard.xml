@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_plan_wizard_form_view" model="ir.ui.view">
+            <field name="name">sale.plan.wizard.form</field>
+            <field name="model">sale.plan.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Sale Plan">
+                    <sheet>
+                            <group>
+                                <field name="quotation_id"/>
+                                <field name="name"/>
+                                <field name="info"/>
+                                <field name="partner_lines"/>
+                            </group>
+                            <footer>
+                                <button name="init_sale_plan_submit" string="Add" type="object" class="btn-primary"/>
+                                <button string="Cancel" class="btn-secondary" special="cancel"/>
+                            </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="sale_plan_wizard_act_window" model="ir.actions.act_window">
+        <field name="name">Add Plan Sale</field>
+        <field name="res_model">sale.plan.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+
+<!--            wizard by action implement            -->
+<!--        <field name="binding_model_id" ref="model_sale_plan_order"/>-->
+<!--        <field name="binding_model_type"/>form</field>-->
+<!--        <field name="view_id" ref="sale_plans.sale_plan_wizard_form_view"/>-->
+    </record>
+    </data>
+</odoo>

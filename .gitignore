@@ -52,7 +52,7 @@ addons/
 customaddons/test_one/
 customaddons/test_two/
 customaddons/tiki_integration/
-customaddons/sale_plans/
+#customaddons/sale_plans/
 debian/
 doc/
 odoo-bin

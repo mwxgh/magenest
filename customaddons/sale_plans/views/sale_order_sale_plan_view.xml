@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_plan_button_form_view_inherit" model="ir.ui.view">
+            <field name="name">sale.plan.button.form.view.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                        <button name="preview_sale_order" position ="after">
+                            <button name='init_sale_plan'
+                                    type="object"
+                                    string="Add Sale Plan"
+                                    class="oe_stat_button"
+                                    icon="fa-bookmark icon"
+                                    attrs="{'invisible': [('sale_plan', '!=', False)]}"
+                            />
+                        </button>
+<!--                                CALL WIZARD BY ACTION               -->
+<!--                            <button name='sale_plans.sale_plan_wizard_act_window'-->
+<!--                                    type="action"-->
+<!--                            />-->
+            </field>
+        </record>
+        <record id="sale_plan_form_view_inherit" model="ir.ui.view">
+            <field name="name">sale.plan.form.view.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="sale_plan" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
